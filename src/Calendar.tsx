@@ -13,7 +13,7 @@ const stringToColour = (str: string) => {
     hash = str.charCodeAt(i) + ((hash << 5) - hash);
   }
 
-  const hue = ((hash >> 5) % 180) + 180;
+  const hue = (((hash >> 5) * 16.237984) % 180) + 180;
   console.log(str, hue);
   return `hsl(${hue}, 100%, 30%)`;
 };
@@ -40,10 +40,11 @@ const Calendar = () => {
         weekends={false}
         locale={fiLocale}
         height="100%"
+        nowIndicator={true}
         headerToolbar={{
           left: "prev,next,today",
           center: "title",
-          right: "dayGridMonth,timeGridWeek",
+          right: "dayGridMonth,timeGridWeek,timeGridDay",
         }}
         events={events.map((e, i) => ({
           title:
