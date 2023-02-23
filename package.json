@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "prebuild": "cd ../crawler && yarn dev",
+    "prebuild": "cd crawler && npm run dev",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -3,7 +3,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import fiLocale from "@fullcalendar/core/locales/fi";
 import timeGridPlugin from "@fullcalendar/timegrid";
 
-import events from "../../crawler/events.json";
+import events from "../crawler/events.json";
 import { useState } from "react";
 import dayjs from "dayjs";
 
